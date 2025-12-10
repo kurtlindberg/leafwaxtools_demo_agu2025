@@ -30,7 +30,7 @@ qpt_chain_arr = np.array(qpt_chain_df)
 
 qpt_pca = Chain(qpt_chain_arr).pca(
     chain_lengths=[22,24,26,28],
-    use_clr=False
+    use_clr=True
 )
 
 
@@ -55,23 +55,25 @@ ax.axhline(y=0, color='black', linestyle='--', linewidth=0.75, zorder=5)
 ax.axvline(x=0, color='black', linestyle='--', linewidth=0.75, zorder=5)
 ax.set_xlabel("PC1 (" + str(np.round(qpt_pca["pca"].explained_variance_ratio_[0]*100, decimals=0)) + "%)")
 ax.set_ylabel("PC2 (" + str(np.round(qpt_pca["pca"].explained_variance_ratio_[1]*100, decimals=0)) + "%)")
-ax.set_xlim([-0.75,0.75])
+ax.set_xlim([-0.9,0.9])
 ax.set_xticks(
-    ticks=[-0.75,-0.5,-0.25,0,0.25,0.5,0.75],
-    labels=[-0.75,-0.5,-0.25,0,0.25,0.5,0.75]
+    ticks=[-0.9,-0.6,-0.3,0,0.3,0.6,0.9],
+    labels=[-0.9,-0.6,-0.3,0,0.3,0.6,0.9]
 )
-ax.set_ylim([-0.75,0.75])
+ax.set_ylim([-0.9,0.9])
 ax.set_yticks(
-    ticks=[-0.75,-0.5,-0.25,0,0.25,0.5,0.75],
-    labels=[-0.75,-0.5,-0.25,0,0.25,0.5,0.75]
+    ticks=[-0.9,-0.6,-0.3,0,0.3,0.6,0.9],
+    labels=[-0.9,-0.6,-0.3,0,0.3,0.6,0.9]
 )
 ax.legend('', frameon=False)
 
 norm = plt.Normalize(qpt_df['age'].min(), qpt_df['age'].max())
 sm = plt.cm.ScalarMappable(cmap='Blues_r', norm=norm)
 sm.set_array([])
-ax.figure.colorbar(sm, ax=ax, location='right', shrink=0.66, label="Age (cal kyr BP)")
+ax.figure.colorbar(sm, ax=ax,
+    location='right', shrink=0.8, label="Age (cal kyr BP)",
+)
 
     
 figure_qpt_pca = plt.gcf()
-figure_qpt_pca.savefig("figures/qpt_pca.svg", dpi=300)
+# figure_qpt_pca.savefig("figures/qpt_pca.png", dpi=300)
