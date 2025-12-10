@@ -39,12 +39,12 @@ qpt_eapp_c28_jja = Isotope(qpt_d2h_arr).epsilon(
 fig, axs = plt.subplots(2,1,layout='constrained')
 
 colors = [
-    '#1b7837',          # C20
-    '#7fbf7b',          # C22
-    # '#d9f0d3',          # C24
-    # '#e7d4e8',          # C26
-    '#af8dc3',          # C28
-    '#762a83'           # C30
+    '#1b7837',          # C22
+    '#7fbf7b',          # C24
+    '#af8dc3',          # C26
+    '#762a83'           # C28
+    # '#d9f0d3',        # unused
+    # '#e7d4e8',        # unused
 ]
 
 ax = axs[0]
