@@ -44,7 +44,7 @@ ax.set_xticks(
     ticks=[6000,5500,5000,4500,4000,3500,3000,2500,2000,1500,1000,500,0],
     labels=[6,"",5,"",4,"",3,"",2,"",1,"",0]
 )
-ax.set_xlabel("Age (cal yr BP)")
+ax.set_xlabel("Age (cal kyr BP)")
 ax.set_ylim([24.5,26.5])
 ax.set_yticks(
     ticks=[24.5,25,25.5,26,26.5],
