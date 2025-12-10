@@ -42,17 +42,13 @@ for row in range(0, len(qpt_relabd[:,0])):
 # Figure script
 fig, axs = plt.subplots(2,1,layout='constrained')
 
-# colors = [
-#     '#2166ac',        # C22
-#     '#67a9cf',        # C24
-#     '#ef8a62',        # C26
-#     '#b2182b'         # C28
-# ]
 colors = [
     '#1b7837',          # C22
     '#7fbf7b',          # C24
     '#af8dc3',          # C26
     '#762a83'           # C28
+    # '#d9f0d3',        # unused
+    # '#e7d4e8',        # unused
 ]
 
 ax = axs[0]
@@ -93,5 +89,5 @@ fig.delaxes(axs[1])
     
     
 figure_qpt_relabd = plt.gcf()
-# figure_qpt_relabd.savefig("figures/qpt_relabd.svg", dpi=300)
+figure_qpt_relabd.savefig("figures/qpt_relabd.png", dpi=300)
 
