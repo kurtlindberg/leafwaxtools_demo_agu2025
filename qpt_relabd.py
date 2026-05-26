@@ -15,7 +15,7 @@ plt.rcParams['font.size'] = 16
 plt.rcParams['font.family'] = "Liberation Sans"
 
 
-qpt_df = pd.read_csv("gorbey2021qpt.csv")
+qpt_df = pd.read_csv("gorbey2022qpt.csv")
 
 qpt_chain_df = qpt_df[
     [

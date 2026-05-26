@@ -1,0 +1,12 @@
+name: lw_agu25
+channels:
+  - default
+  - conda-forge
+dependencies:
+  - python=3.12.9
+  - pip
+  - matplotlib
+  - seaborn
+  - cartopy
+  - pip:
+      - leafwaxtools
